@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>Baton by shama</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1>Baton</h1>
+        <p>A Multi-Framework Composer Library Installer</p>
+        <p class="view"><a href="https://github.com/shama/baton">View the Project on GitHub <small>shama/baton</small></a></p>
+        <ul>
+          <li><a href="https://github.com/shama/baton/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/shama/baton/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/shama/baton">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
+        <p><a href="http://travis-ci.org/shama/baton"><img src="https://secure.travis-ci.org/shama/baton.png" alt="Build Status"></a></p>
+
+<p>This is for PHP package authors to require in their <code>composer.json</code>. It will
+magically install their package to the correct location based on the specified
+package type.</p>
+
+<p><strong>Current Supported Package Types</strong>:</p>
+
+<ul>
+<li>CakePHP 2+   <code>cakephp-</code>
+</li>
+<li>CodeIgniter  <code>codeigniter-</code>
+</li>
+<li>Drupal       <code>drupal-</code>
+</li>
+<li>FuelPHP      <code>fuelphp-</code>
+</li>
+<li>Joomla       <code>joomla-</code>
+</li>
+<li>Laravel      <code>laravel-</code>
+</li>
+<li>Lithium      <code>lithium-</code>
+</li>
+<li>phpBB        <code>phpbb-</code>
+</li>
+<li>Symfony1     <code>symfony1-</code>
+</li>
+<li>WordPress    <code>wordpress-</code>
+</li>
+<li>Zend         <code>zend-</code>
+</li>
+</ul><h2>Example <code>composer.json</code> File</h2>
+
+<p>This is an example for a CakePHP plugin. The only important parts to set in your
+composer.json file are <code>"type": "cakephp-plugin"</code> which tells Baton what your
+package is and <code>"require": { "shama/baton": "*" }</code> which tells composer to use
+the Baton installer.</p>
+
+<div class="highlight">
+<pre><span class="p">{</span>
+    <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"shama/ftp"</span><span class="p">,</span>
+    <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"cakephp-plugin"</span><span class="p">,</span>
+    <span class="nt">"require"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"php"</span><span class="p">:</span> <span class="s2">"&gt;=5.3"</span><span class="p">,</span>
+        <span class="nt">"shama/baton"</span><span class="p">:</span> <span class="s2">"*"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+
+<p>This would install your package to the <code>app/Plugin/Ftp/</code> folder of a CakePHP app
+when a user runs <code>php composer.phar install</code>.</p>
+
+<p>So submit your packages to <a href="http://packagist.org">packagist.org</a>!</p>
+
+<h2>Current Supported Types (Default Types in Bold)</h2>
+
+<ul>
+<li>CakePHP
+
+<ul>
+<li>cakephp-app</li>
+<li>cakephp-plugin</li>
+<li>cakephp-lib</li>
+<li><strong>cakephp-vendor</strong></li>
+<li>cakephp-model</li>
+<li>cakephp-behavior</li>
+<li>cakephp-controller</li>
+<li>cakephp-component</li>
+<li>cakephp-helper</li>
+<li>cakephp-theme</li>
+</ul>
+</li>
+<li>CodeIgniter
+
+<ul>
+<li>codeigniter-app</li>
+<li><strong>codeigniter-library</strong></li>
+<li>codeigniter-controller</li>
+<li>codeigniter-third-party</li>
+<li>codeigniter-model</li>
+<li>codeigniter-helper</li>
+</ul>
+</li>
+<li>Drupal
+
+<ul>
+<li><strong>drupal-module</strong></li>
+<li>drupal-theme</li>
+</ul>
+</li>
+<li>FuelPHP
+
+<ul>
+<li>fuelphp-app</li>
+<li><strong>fuelphp-module</strong></li>
+</ul>
+</li>
+<li>Joomla
+
+<ul>
+<li>joomla-component</li>
+<li>joomla-module</li>
+<li>joomla-template</li>
+<li><strong>joomla-plugin</strong></li>
+<li>joomla-library</li>
+</ul>
+</li>
+<li>Laravel
+
+<ul>
+<li>laravel-app</li>
+<li><strong>laravel-library</strong></li>
+</ul>
+</li>
+<li>Lithium
+
+<ul>
+<li>lithium-app</li>
+<li><strong>lithium-library</strong></li>
+<li>lithium-controller</li>
+<li>lithium-extension</li>
+<li>lithium-model</li>
+</ul>
+</li>
+<li>phpBB
+
+<ul>
+<li><strong>phpbb-extension</strong></li>
+</ul>
+</li>
+<li>Symfony1
+
+<ul>
+<li><strong>symfony1-plugin</strong></li>
+</ul>
+</li>
+<li>WordPress
+
+<ul>
+<li><strong>wordpress-plugin</strong></li>
+<li>wordpress-theme</li>
+</ul>
+</li>
+<li>Zend
+
+<ul>
+<li>zend-library</li>
+<li>zend-extra</li>
+</ul>
+</li>
+</ul><h2>Roll Your Own Path</h2>
+
+<p>Composer makes it real easy to customize the install path of your package with
+<a href="http://getcomposer.org/doc/04-schema.md#target-dir">target-dir</a>. This works
+with Baton as well:</p>
+
+<div class="highlight">
+<pre><span class="p">{</span>
+    <span class="nt">"name"</span><span class="p">:</span> <span class="s2">"shama/ftp"</span><span class="p">,</span>
+    <span class="nt">"type"</span><span class="p">:</span> <span class="s2">"cakephp-plugin"</span><span class="p">,</span>
+    <span class="nt">"target-dir"</span><span class="p">:</span> <span class="s2">"Custom/Path/{vendor}/{name}/"</span><span class="p">,</span>
+    <span class="nt">"require"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">"php"</span><span class="p">:</span> <span class="s2">"&gt;=5.3"</span><span class="p">,</span>
+        <span class="nt">"shama/baton"</span><span class="p">:</span> <span class="s2">"*"</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</pre>
+</div>
+
+
+<p>This would install this package to <code>Custom/Path/shama/ftp/</code>. The available
+var <code>{options}</code> in Baton are: <code>vendor</code>, <code>name</code> and <code>type</code>.</p>
+
+<h2>Contribute!</h2>
+
+<p>Please fork and send a pull request against the <code>master</code> branch. Thanks!</p>
+
+<p>Baton uses <a href="http://phpunit.de">PHPUnit</a>. Please use <code>phpunit -c tests</code> to run
+the test suite.</p>
+      </section>
+    </div>
+    <footer>
+      <p>Project maintained by <a href="https://github.com/shama">shama</a></p>
+      <p>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></p>
+    </footer>
+    <!--[if !IE]><script>fixScale(document);</script><!--<![endif]-->
+              <script type="text/javascript">
+            var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+            document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+          </script>
+          <script type="text/javascript">
+            try {
+              var pageTracker = _gat._getTracker("UA-32631384-1");
+            pageTracker._trackPageview();
+            } catch(err) {}
+          </script>
+
+  </body>
+</html>
